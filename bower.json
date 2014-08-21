@@ -1,0 +1,30 @@
+{
+  "name": "churchmouse",
+  "version": "0.0.1",
+  "homepage": "https://github.com/herereadthis/churchmouse",
+  "authors": [
+    {
+      "name": "Jimmy Ha",
+      "homepage": "http://herereadthis.com"
+    }
+  ],
+  "description": "Code for the Viginia Kyudo Renmei website",
+  "license": "GPL",
+  "private": true,
+  "ignore": [
+    ".sass-cache",
+    "node_modules",
+    "bower_components",
+    "src/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bellmaker": "~0.3.5",
+    "greeneyes": "~0.1.4",
+    "mossflower": "~0.1.6",
+    "requirejs": "~2.1.14",
+    "sunflash": "~0.1.5",
+    "jquery": "~2.1.1"
+  }
+}
