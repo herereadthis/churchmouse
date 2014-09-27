@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 
   // Configurable paths for the application
   var appConfig = {
-    app: require('./bower.json').appPath || 'app',
+    app: require('./bower.json').appPath || 'src',
     dist: 'dist'
   };
 
@@ -157,6 +157,16 @@ module.exports = function (grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
+      }
+    },
+    less: {
+      churchmouse: {
+        options: {
+            paths: ['<%= yeoman.app %>/less']
+        },
+        files: {
+          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/imports.less'
+        }
       }
     },
 
@@ -383,6 +393,7 @@ module.exports = function (grunt) {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
+    'less',
     'autoprefixer',
     'concat',
     'ngAnnotate',
