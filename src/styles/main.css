@@ -105,3 +105,15 @@ pre > code {
 .sunflash_navmenu li a {
   display: block;
 }
+#photo_switcher {
+  width: 33.3333vw;
+  float: left;
+}
+#photo_switcher figure {
+  width: 100%;
+  height: 33.33333vh;
+  overflow-y: hidden;
+}
+#photo_switcher img {
+  width: 100%;
+}
