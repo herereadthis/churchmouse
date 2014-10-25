@@ -1,4 +1,4 @@
-// Generated on 2014-09-26 using generator-angular 0.9.8
+// Generated on 2014-10-25 using generator-angular 0.9.8
 'use strict';
 
 // # Globbing
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
         tasks: ['newer:jshint:test', 'karma']
       },
       less: {
-        files: ['<%= yeoman.app %>/less/{,*/}*.less'],
+        files: ['<%= yeoman.app %>/styles/{,*/}*.less'],
         tasks: ['less']
       },
       styles: {
@@ -169,7 +169,7 @@ module.exports = function (grunt) {
             paths: ['<%= yeoman.app %>/less']
         },
         files: {
-          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/less/imports.less'
+          '<%= yeoman.app %>/styles/main.css': '<%= yeoman.app %>/styles/less/imports.less'
         }
       }
     },

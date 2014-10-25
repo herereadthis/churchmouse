@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name churchmouseApp
+ * @name churchMouseApp
  * @description
- * # churchmouseApp
+ * # churchMouseApp
  *
  * Main module of the application.
  */
 angular
-  .module('churchmouseApp', [
+  .module('churchMouseApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

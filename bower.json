@@ -1,6 +1,6 @@
 {
-  "name": "churchmouse",
-  "version": "0.1.0",
+  "name": "foo",
+  "version": "0.1.1",
   "dependencies": {
     "angular": "~1.2.0",
     "json3": "~3.3.1",

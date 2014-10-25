@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name churchmouseApp.controller:AboutCtrl
+ * @name churchMouseApp.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the churchmouseApp
+ * Controller of the churchMouseApp
  */
-angular.module('churchmouseApp')
+angular.module('churchMouseApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
