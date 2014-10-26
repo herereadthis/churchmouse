@@ -152,8 +152,28 @@ pre > code {
 #kyudo_kanji div {
   box-sizing: border-box;
   height: 100vh;
-  padding: 5rem 2rem 0 2rem;
   text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  #kyudo_kanji div {
+    padding: 6rem 1.2rem 0 1.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #kyudo_kanji div {
+    padding: 6rem 1.5rem 0 1.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #kyudo_kanji div {
+    padding: 6rem 2rem 0 2rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #kyudo_kanji div {
+    padding: 6rem 2rem 0 2rem;
+    background-color: #F00;
+  }
 }
 #kyudo_kanji img {
   max-height: 100%;
@@ -163,6 +183,12 @@ pre > code {
   width: 75%;
   float: left;
   height: 8rem;
+}
+[role="banner"] h1 {
+  float: right;
+  font-size: 3rem;
+  line-height: 4rem;
+  padding-top: 4rem;
 }
 #banner_images {
   width: 75%;
@@ -208,4 +234,15 @@ pre > code {
 }
 [role="contentinfo"] {
   clear: both;
+}
+body {
+  font-family: 'Arvo', serif;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+}
+h1 {
+  font-weight: 300;
 }
