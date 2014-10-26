@@ -1,7 +1,30 @@
+#banner_container {
+    min-height: 100vh;
+    background-image: linear-gradient(0deg, @color_kyudo_purple 0%, @color_kyudo_purple 100%);
+    background-repeat: no-repeat;
+
+    background-position: 0 8rem;
+
+    @media @da_small {
+        background-size: 100% @pw_small * 0.421875;
+    }
+    @media @da_medium {
+        background-size: 100% @pw_medium * 0.421875;
+    }
+    @media @da_large {
+        background-size: 100% @pw_large * 0.421875;
+    }
+    @media @da_x_large {
+        background-size: 100% @pw_x_large * 0.421875;
+    }
+}
+
+
 #kyudo_kanji {
     float: left;
     width: 25%;
     height: 100vh;
+    background-color: #FFF;
 
     div {
         box-sizing: border-box;
