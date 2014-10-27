@@ -3,9 +3,9 @@
     background-image: linear-gradient(90deg, @color_kyudo_purple_1 0%, @color_kyudo_purple_1 100%);
     background-repeat: no-repeat;
 
-    background-position: 0 8rem;
 
     @media @da_small {
+        background-position: 0 8rem;
         background-size: 100% @pw_small * 0.421875;
     }
     @media @da_medium {
@@ -15,6 +15,7 @@
         background-size: 100% @pw_large * 0.421875;
     }
     @media @da_x_large {
+        background-position: 0 10rem;
         background-size: 100% @pw_x_large * 0.421875;
     }
 }
@@ -42,34 +43,54 @@
             padding: 6rem 2rem 0 2rem;
         }
         @media @da_x_large {
-            padding: 6rem 2rem 0 2rem;
-            background-color: #F00;
+            padding: 8rem 2.2rem 0 2.2rem;
         }
         text-align: center;
     }
     img {
-        max-height: 100%;
-        max-width: 100%;
+        width: 100%;
     }
 }
 
 [role="banner"] {
-    width: 75%;
-    float: left;
-    height: 8rem;
+    @media @da_small {
+        width: 75%;
+        float: left;
+        height: 8rem;
 
-    h1 {
-        float: right;
-        font-size: 3rem;
-        line-height: 4rem;
-        padding-top: 4rem;
+        h1 {
+            float: right;
+            font-size: 3rem;
+            line-height: 4rem;
+            padding-top: 4rem;
+        }
+    }
+    @media @da_x_large {
+        height: 10rem;
+
+        h1 {
+            float: right;
+            font-size: 4rem;
+            line-height: 5rem;
+            padding-top: 5rem;
+        }
     }
 }
 #banner_images {
     width: 75%;
     float: left;
 
+    figure {
+        position: relative;
 
+        p {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    img {
+        margin: 0 auto;
+    }
     @media @da_small {
         figure, img {
             width: @pw_small * 0.75;
@@ -93,18 +114,5 @@
             width: @pw_x_large * 0.75;
             height: @pw_x_large * 0.421875;
         }
-    }
-
-    figure {
-        position: relative;
-
-        p {
-            position: absolute;
-            bottom: 0;
-        }
-    }
-
-    img {
-        margin: 0 auto;
     }
 }

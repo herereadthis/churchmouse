@@ -1,0 +1,32 @@
+#kasumi {
+    min-height: 102vh;
+    background-image:
+        url("/images/kasumi_mato.svg"),
+        linear-gradient(90deg, #FFF 0%, #FFF 50%, @color_triad_3 50%, @color_triad_3 100%);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+
+    section {
+        background-color: @color_triad_2;
+        min-height: 102vh;
+        background-image:
+            url("/images/kasumi_mato.svg");
+        background-repeat: no-repeat;
+        background-position: 0 center;
+
+        box-sizing: border-box;
+    }
+    @media @da_medium {
+        section {
+            padding-left: 48rem;
+            background-position: -28rem center;
+            background-size: 60rem;
+        }
+    }
+    p {
+        color: #FFF;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+}

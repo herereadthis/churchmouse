@@ -121,10 +121,10 @@ pre > code {
   min-height: 100vh;
   background-image: linear-gradient(90deg, #55236c 0%, #55236c 100%);
   background-repeat: no-repeat;
-  background-position: 0 8rem;
 }
 @media only screen and (min-width: 768px) {
   #banner_container {
+    background-position: 0 8rem;
     background-size: 100% 32.4rem;
   }
 }
@@ -140,6 +140,7 @@ pre > code {
 }
 @media only screen and (min-width: 1440px) {
   #banner_container {
+    background-position: 0 10rem;
     background-size: 100% 56.7rem;
   }
 }
@@ -171,28 +172,49 @@ pre > code {
 }
 @media only screen and (min-width: 1440px) {
   #kyudo_kanji div {
-    padding: 6rem 2rem 0 2rem;
-    background-color: #F00;
+    padding: 8rem 2.2rem 0 2.2rem;
   }
 }
 #kyudo_kanji img {
-  max-height: 100%;
-  max-width: 100%;
+  width: 100%;
 }
-[role="banner"] {
-  width: 75%;
-  float: left;
-  height: 8rem;
+@media only screen and (min-width: 768px) {
+  [role="banner"] {
+    width: 75%;
+    float: left;
+    height: 8rem;
+  }
+  [role="banner"] h1 {
+    float: right;
+    font-size: 3rem;
+    line-height: 4rem;
+    padding-top: 4rem;
+  }
 }
-[role="banner"] h1 {
-  float: right;
-  font-size: 3rem;
-  line-height: 4rem;
-  padding-top: 4rem;
+@media only screen and (min-width: 1440px) {
+  [role="banner"] {
+    height: 10rem;
+  }
+  [role="banner"] h1 {
+    float: right;
+    font-size: 4rem;
+    line-height: 5rem;
+    padding-top: 5rem;
+  }
 }
 #banner_images {
   width: 75%;
   float: left;
+}
+#banner_images figure {
+  position: relative;
+}
+#banner_images figure p {
+  position: absolute;
+  bottom: 0;
+}
+#banner_images img {
+  margin: 0 auto;
 }
 @media only screen and (min-width: 768px) {
   #banner_images figure,
@@ -222,15 +244,31 @@ pre > code {
     height: 56.7rem;
   }
 }
-#banner_images figure {
-  position: relative;
+#kasumi {
+  min-height: 102vh;
+  background-image: url("/images/kasumi_mato.svg"), linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #0d3924 50%, #0d3924 100%);
+  background-repeat: no-repeat;
+  background-position: 0 center;
 }
-#banner_images figure p {
-  position: absolute;
-  bottom: 0;
+#kasumi section {
+  background-color: #796233;
+  min-height: 102vh;
+  background-image: url("/images/kasumi_mato.svg");
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  box-sizing: border-box;
 }
-#banner_images img {
-  margin: 0 auto;
+@media only screen and (min-width: 1024px) {
+  #kasumi section {
+    padding-left: 48rem;
+    background-position: -28rem center;
+    background-size: 60rem;
+  }
+}
+#kasumi p {
+  color: #FFF;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
 }
 [role="contentinfo"] {
   clear: both;
