@@ -105,6 +105,14 @@ pre > code {
 .sunflash_navmenu li a {
   display: block;
 }
+p {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  margin-bottom: 2.2rem;
+}
+article {
+  clear: both;
+}
 #photo_switcher {
   width: 33.3333vw;
   float: left;
@@ -117,8 +125,40 @@ pre > code {
 #photo_switcher img {
   width: 100%;
 }
+.bellmaker_container {
+  background-image: linear-gradient(90deg, #aaaaaa 0%, #aaaaaa 100%);
+  background-repeat: repeat-y;
+  position: relative;
+  background-size: 0.2rem 1rem;
+}
+.bellmaker_container:before {
+  display: block;
+  content: "";
+  background-color: #aaaaaa;
+  width: 0.2rem;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: -0.2rem;
+  z-index: 10;
+}
+@media only screen and (min-width: 768px) {
+  .bellmaker_container {
+    background-position: 19rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bellmaker_container {
+    background-position: 23.8rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bellmaker_container {
+    background-position: 28.6rem 0;
+  }
+}
 #banner_container {
-  min-height: 100vh;
+  min-height: 102vh;
   background-image: linear-gradient(90deg, #55236c 0%, #55236c 100%);
   background-repeat: no-repeat;
 }
@@ -144,11 +184,63 @@ pre > code {
     background-size: 100% 56.7rem;
   }
 }
+#banner_container .bellmaker_container {
+  min-height: 102vh;
+}
+#quick_info {
+  width: 75%;
+  float: left;
+}
+#quick_info p {
+  padding: 1.5rem 0 0 1.5rem;
+}
 #kyudo_kanji {
   float: left;
   width: 25%;
-  height: 100vh;
-  background-color: #FFF;
+  height: 102vh;
+  position: relative;
+  background-image: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 768px) {
+  #kyudo_kanji {
+    background-size: 19rem 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #kyudo_kanji {
+    background-size: 23.8rem 100%;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #kyudo_kanji {
+    background-size: 28.6rem 100%;
+  }
+}
+#kyudo_kanji:after {
+  display: block;
+  content: "";
+  background-color: #55236c;
+  width: 0.2rem;
+  position: absolute;
+  z-index: 11;
+}
+@media only screen and (min-width: 768px) {
+  #kyudo_kanji:after {
+    height: 32.4rem;
+    top: 8rem;
+    left: -0.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #kyudo_kanji:after {
+    height: 40.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #kyudo_kanji:after {
+    height: 48.6rem;
+  }
 }
 #kyudo_kanji div {
   box-sizing: border-box;
@@ -244,6 +336,36 @@ pre > code {
     height: 56.7rem;
   }
 }
+#wabi_sabi section {
+  min-height: 100vh;
+}
+@media only screen and (min-width: 768px) {
+  #wabi_sabi section {
+    width: 38.4rem;
+    padding-left: 28.8rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #wabi_sabi section {
+    width: 48rem;
+    padding-left: 36rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #wabi_sabi section {
+    width: 57.6rem;
+    padding-left: 43.2rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #wabi_sabi section {
+    width: 67.2rem;
+    padding-left: 50.4rem;
+  }
+}
+#wabi_sabi p:first-child {
+  padding-top: 2.2rem;
+}
 #kasumi {
   min-height: 102vh;
   background-image: url("/images/kasumi_mato.svg"), linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #0d3924 50%, #0d3924 100%);
@@ -251,7 +373,7 @@ pre > code {
   background-position: 0 center;
 }
 #kasumi section {
-  background-color: #796233;
+  background-color: #33b878;
   min-height: 102vh;
   background-image: url("/images/kasumi_mato.svg");
   background-repeat: no-repeat;
@@ -261,8 +383,8 @@ pre > code {
 @media only screen and (min-width: 1024px) {
   #kasumi section {
     padding-left: 48rem;
-    background-position: -28rem center;
-    background-size: 60rem;
+    background-position: -40rem center;
+    background-size: 72rem;
   }
 }
 #kasumi p {
