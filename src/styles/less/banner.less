@@ -29,27 +29,33 @@
     @media @da_large {
         background-position: 28.6rem 0;
     }
+    @media @da_x_large {
+        background-position: 33.4rem 0;
+    }
 }
 
 
 #banner_container {
-    min-height: 102vh;
     background-image: linear-gradient(90deg, @color_kyudo_purple_1 0%, @color_kyudo_purple_1 100%);
     background-repeat: no-repeat;
 
 
     @media @da_small {
+        min-height: 8rem + @pw_small * 0.421875;
         background-position: 0 8rem;
         background-size: 100% @pw_small * 0.421875;
     }
     @media @da_medium {
+        min-height: 8rem + @pw_medium * 0.421875;
         background-size: 100% @pw_medium * 0.421875;
     }
     @media @da_large {
+        min-height: 10rem + @pw_large * 0.421875;
+        background-position: 0 10rem;
         background-size: 100% @pw_large * 0.421875;
     }
     @media @da_x_large {
-        background-position: 0 10rem;
+        min-height: 10rem + @pw_x_large * 0.421875;
         background-size: 100% @pw_x_large * 0.421875;
     }
 
@@ -69,15 +75,20 @@
 
     p {
         padding: 1.5rem 0 0 1.5rem;
+        margin-bottom: 0;
         // font-size: 1.2rem;
         // line-height: 1.5rem;
+    }
+    :after {
+        display: block;
+        content: "";
     }
 }
 
 #kyudo_kanji {
     float: left;
     width: 25%;
-    height: 102vh;
+    min-height: 102vh;
     // background-color: #FFF;
     position: relative;
     background-image:
@@ -94,6 +105,9 @@
     @media @da_large {
         background-size: 28.6rem 100%;
     }
+    @media @da_x_large {
+        background-size: 33.4rem 100%;
+    }
 
     &:after {
         display: block;
@@ -104,18 +118,14 @@
         z-index: 11;
 
         @media @da_small {
-            height: 32.4rem;
             top: 8rem;
             left: -0.2rem;
         }
-        @media @da_medium {
-            height: 40.5rem;
-        }
         @media @da_large {
-            height: 48.6rem;
+            top: 10rem;
         }
+        .bellmaker_factor(height, 0.421875);
     }
-
     div {
         box-sizing: border-box;
         height: 100vh;
@@ -129,10 +139,10 @@
             padding: 6rem 1.5rem 0 1.5rem;
         }
         @media @da_large {
-            padding: 6rem 2rem 0 2rem;
+            padding: 8rem 2rem 0 2rem;
         }
         @media @da_x_large {
-            padding: 8rem 2.2rem 0 2.2rem;
+            padding: 8rem 2.3rem 0 2.3rem;
         }
         text-align: center;
     }
@@ -154,7 +164,7 @@
             padding-top: 4rem;
         }
     }
-    @media @da_x_large {
+    @media @da_large {
         height: 10rem;
 
         h1 {
@@ -180,28 +190,8 @@
     img {
         margin: 0 auto;
     }
-    @media @da_small {
-        figure, img {
-            width: @pw_small * 0.75;
-            height: @pw_small * 0.421875;
-        }
-    }
-    @media @da_medium {
-        figure, img {
-            width: @pw_medium * 0.75;
-            height: @pw_medium * 0.421875;
-        }
-    }
-    @media @da_large {
-        figure, img {
-            width: @pw_large * 0.75;
-            height: @pw_large * 0.421875;
-        }
-    }
-    @media @da_x_large {
-        figure, img {
-            width: @pw_x_large * 0.75;
-            height: @pw_x_large * 0.421875;
-        }
+    figure, img {
+        .bellmaker_factor(width, 0.75);
+        .bellmaker_factor(height, 0.421875);
     }
 }

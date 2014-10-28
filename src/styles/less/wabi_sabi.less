@@ -1,23 +1,8 @@
 #wabi_sabi {
     section {
         min-height: 100vh;
-
-        @media @da_small {
-            width: @pw_small * 0.5;
-            padding-left: @pw_small * 0.375;
-        }
-        @media @da_medium {
-            width: @pw_medium * 0.5;
-            padding-left: @pw_medium * 0.375;
-        }
-        @media @da_large {
-            width: @pw_large * 0.5;
-            padding-left: @pw_large * 0.375;
-        }
-        @media @da_x_large {
-            width: @pw_x_large * 0.5;
-            padding-left: @pw_x_large * 0.375;
-        }
+        .bellmaker_factor(width,0.5);
+        .bellmaker_factor(padding-left, 0.375);
     }
     p:first-child {
         padding-top: 2.2rem;
