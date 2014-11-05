@@ -41,29 +41,41 @@
 
 
     @media @da_small {
-        min-height: 8rem + @pw_small * 0.421875;
         background-position: 0 8rem;
         background-size: 100% @pw_small * 0.421875;
     }
     @media @da_medium {
-        min-height: 8rem + @pw_medium * 0.421875;
         background-size: 100% @pw_medium * 0.421875;
     }
     @media @da_large {
-        min-height: 10rem + @pw_large * 0.421875;
         background-position: 0 10rem;
         background-size: 100% @pw_large * 0.421875;
     }
     @media @da_x_large {
-        min-height: 10rem + @pw_x_large * 0.421875;
         background-size: 100% @pw_x_large * 0.421875;
-    }
-
-    .bellmaker_container {
-        min-height: 102vh;
-    }   
+    }  
 }
 
+@media @da_small {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 8rem + 8.7rem + @pw_small * 0.421875;
+    }
+}
+@media @da_medium {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 8rem + 8.7rem + @pw_medium * 0.421875;
+    }
+}
+@media @da_large {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 10rem + 8.7rem + @pw_large * 0.421875;
+    }
+}
+@media @da_x_large {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 10rem + 8.7rem + @pw_x_large * 0.421875;
+    }
+}
 
 #quick_info {
     // text-align: right;
@@ -88,13 +100,11 @@
 #kyudo_kanji {
     float: left;
     width: 25%;
-    min-height: 102vh;
     // background-color: #FFF;
     position: relative;
     background-image:
         linear-gradient(0deg, #FFF 0%, #FFF 100%);
     background-repeat: no-repeat;
-
 
     @media @da_small {
         background-size: 19rem 100%;

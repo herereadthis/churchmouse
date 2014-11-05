@@ -168,32 +168,49 @@ article {
 }
 @media only screen and (min-width: 768px) {
   #banner_container {
-    min-height: 40.4rem;
     background-position: 0 8rem;
     background-size: 100% 32.4rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   #banner_container {
-    min-height: 48.5rem;
     background-size: 100% 40.5rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   #banner_container {
-    min-height: 58.6rem;
     background-position: 0 10rem;
     background-size: 100% 48.6rem;
   }
 }
 @media only screen and (min-width: 1440px) {
   #banner_container {
-    min-height: 66.7rem;
     background-size: 100% 56.7rem;
   }
 }
-#banner_container .bellmaker_container {
-  min-height: 102vh;
+@media only screen and (min-width: 768px) {
+  .bellmaker_container,
+  #kyudo_kanji {
+    min-height: 49.1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .bellmaker_container,
+  #kyudo_kanji {
+    min-height: 57.2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bellmaker_container,
+  #kyudo_kanji {
+    min-height: 67.3rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .bellmaker_container,
+  #kyudo_kanji {
+    min-height: 75.4rem;
+  }
 }
 #quick_info {
   width: 75%;
@@ -210,7 +227,6 @@ article {
 #kyudo_kanji {
   float: left;
   width: 25%;
-  min-height: 102vh;
   position: relative;
   background-image: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
   background-repeat: no-repeat;
