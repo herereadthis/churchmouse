@@ -1,0 +1,27 @@
+
+<div class="bellmaker_container">
+    <p>Invoice View</p>
+
+    <p>{{ foo }}</p>
+    <label>
+        <span>Quantity</span>
+        <input type="number" min="0" ng-model="quantity" required />
+    </label>
+    <br />
+    <label>
+        <span>Costs</span>
+        <input type="number" min="0" ng-model="cost" required />
+    </label>
+    <br />
+
+    <select ng-model="inCurrency">
+        <option ng-repeat="currency in currencies">{{ currency }}</option>
+    </select>
+
+    <div>
+        <p>Total</p>
+        <span ng-repeat="currency in currencies">
+            <!-- using the angular filter for currency -->
+            {{ total(currency) | currency:currency }}
+        </span>
+</div>
