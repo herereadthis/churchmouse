@@ -13,9 +13,4 @@ angular.module('churchMouseApp')
         $http.get('/json/masters.json').success(function(data) {
             $scope.masters = data;
         });
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
     });
