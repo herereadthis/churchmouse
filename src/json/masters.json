@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "name": "Awa Kenzo",
+        "description": "<p>The great master Awa Kenzo (1880 – 1939) was widely regarded as an eccentric personality, but he was also a strong advocate of the spiritual side of Kyudo practice.</p><p>Master Awa was the teacher of the great master Anzawa Heigiro.</p>",
+        "masters": []
+    },
+    {
+        "id": 2,
+        "name": "Anzawa Heigiro",
+        "description": "<p>Master Anzawa Heigiro is generally recognized as the greatest of Master Awa's students.</p><p>Master Anzawa continued his teacher’s emphasis on developing a person’s inner qualities as the core of Kyudo practice.</p><p>An important student of Master Anzawa was Kitajima Yoshio.</p>",
+        "masters": [
+            "Awa Kenzo"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Kitajima Yoshio",
+        "description": "<p>Kitajima Yoshio, modern Kyudo Hanshi, 8th dan, taught in the Kunitachi City area of Tokyo.</p><p>One of the students drawn to the Kitajima dojo was the American, Mike Mason.</p>",
+        "masters": [
+            "Anzawa Heigiro"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Mike Mason",
+        "description": "<p>Mike Mason, 4th dan, a student of Kitajima Yoshio sensei while living in Japan in the 1980s, became the founding president of the Texas Kyudo Renmei (now the Texas Kyudo Kai).</p><p>One of Mike’s students in Texas was Bill Reid. Mike now lives with his family in Okinawa.</p>",
+        "masters": [
+            "Kitajima Yoshio"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Dan DeProspero",
+        "description": "<p>Dan DeProspero, Renshi, 6th dan, operates the Meishin Kyudojo in Apex, NC. He is president of the North Carolina Kyudo Renmei, and past president of the American Kyudo Renmei (AKR). He studied with Master Onuma Hideharu, 15th Generation Headmaster of Heki Ryu Sekka-ha and modern Kyudo Hanshi, 9th dan.</p><p>In a delightful coincidence, Onuma sensei was also a friend and colleague of Master Anzawa and Kitajima sensei and traveled with them periodically to demonstrate and teach Kyudo.</p>",
+        "masters": [
+            "Onuma Hideharu"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Bill Reid",
+        "description": "<p>Bill Reid, 5th dan, moved from Texas to Virginia in 2001 and became a student of Dan DeProspero sensei. The Kyudo styles Bill has learned from Kitajima sensei (through Mike Mason) and Onuma sensei (through DeProspero sensei) are highly compatible and present no conflict with each other.</p><p>Bill is the current president and chief instructor of the Virginia Kyudo Renmei.</p>",
+        "masters": [
+            "Dan DeProspero",
+            "Mike Mason"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Onuma Hideharu",
+        "description": "<p>15th Generation Headmaster of Heki Ryu Sekka-ha and modern Kyudo Hanshi, 9th dan.</p>",
+        "masters": []
+    }
+]

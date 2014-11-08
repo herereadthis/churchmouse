@@ -2,4 +2,11 @@
 
 <div class="bellmaker_container">
     <h1>FunTime</h1>
+    <p ng-repeat="thing in awesomeThings">{{ thing }}<p>
+
+    <ul>
+        <li ng-repeat="master in masters">
+            <p>{{ master.name }}</p>
+            {{ master.description }}
+        </li>
 </div>
