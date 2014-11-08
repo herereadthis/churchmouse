@@ -9,11 +9,13 @@
  */
 
 angular.module('churchMouseApp')
-    .controller('InvoiceCtrl', function ($scope) {
+    .controller('InvoiceCtrl', ['$scope', 'currencyConverter', function ($scope, currencyConverter) {
         window.console.log('foo');
         $scope.foo = 'foo';
         $scope.quantity = 1;
         $scope.cost = 2;
+        $scope.currencies = currencyConverter.currencies;
+
         $scope.currencies = ['EUR', 'USD', 'CNY'];
         $scope.inCurrency = 'EUR';
         $scope.usdToForeignRates = {
@@ -25,12 +27,12 @@ angular.module('churchMouseApp')
         $scope.total = function(outCurrency) {
             // return outCurrency;
             var amount = $scope.quantity * $scope.cost;
-            return convertCurrency(amount, $scope.inCurrency, outCurrency);
+            return currencyConverter.convert(amount, $scope.inCurrency, outCurrency);
         };
-        var convertCurrency = function(amount, inCurrency, outCurrency) {
-            // window.console.log($scope.usdToForeignRates[outCurrency] / $scope.usdToForeignRates[inCurrency]);
-            // window.console.log(amount);
-            var conversionRate = $scope.usdToForeignRates[outCurrency] / $scope.usdToForeignRates[inCurrency];
-            return amount * conversionRate;
-        };
-    });
+        // var convertCurrency = function(amount, inCurrency, outCurrency) {
+        //     // window.console.log($scope.usdToForeignRates[outCurrency] / $scope.usdToForeignRates[inCurrency]);
+        //     // window.console.log(amount);
+        //     var conversionRate = $scope.usdToForeignRates[outCurrency] / $scope.usdToForeignRates[inCurrency];
+        //     return amount * conversionRate;
+        // };
+    }]);

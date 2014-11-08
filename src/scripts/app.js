@@ -16,7 +16,8 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'churchMouseFilters'
+        'churchMouseFilters',
+        'financeServices'
     ])
     .config(function ($routeProvider) {
         $routeProvider
