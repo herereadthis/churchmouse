@@ -9,8 +9,8 @@
  */
 
 angular.module('churchMouseApp')
-    .controller('FunTimeCtrl', function ($scope, $http) {
+    .controller('FunTimeCtrl', ['$scope', '$http', function ($scope, $http) {
         $http.get('/json/masters.json').success(function(data) {
             $scope.masters = data;
         });
-    });
+    }]);

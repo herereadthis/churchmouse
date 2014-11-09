@@ -105,6 +105,10 @@ pre > code {
 .sunflash_navmenu li a {
   display: block;
 }
+.font_standard {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
 p {
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -475,6 +479,74 @@ article {
   color: #FFF;
   font-size: 1.6rem;
   line-height: 2.2rem;
+}
+#master_selection {
+  overflow: auto;
+  float: left;
+}
+#master_selection li {
+  display: block;
+  float: left;
+  list-style-type: none;
+}
+#master_selection li a {
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  #master_selection {
+    width: 19.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #master_selection {
+    width: 24rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #master_selection {
+    width: 28.8rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #master_selection {
+    width: 33.6rem;
+  }
+}
+#master_selection li {
+  float: none;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  text-align: right;
+  padding-right: 2rem;
+}
+#master_selection a {
+  cursor: pointer;
+}
+#master_description {
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  #master_description {
+    width: 57.6rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #master_description {
+    width: 72rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  #master_description {
+    width: 86.4rem;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #master_description {
+    width: 100.8rem;
+  }
+}
+#master_description p {
+  padding-left: 2rem;
 }
 [role="contentinfo"] {
   clear: both;
