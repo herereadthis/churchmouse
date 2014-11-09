@@ -517,7 +517,11 @@ article {
   font-size: 1.6rem;
   line-height: 2.4rem;
   text-align: right;
-  padding-right: 2rem;
+  margin-right: 0.2rem;
+  padding-right: 1.8rem;
+}
+#master_selection li.selected {
+  background-color: #EEE;
 }
 #master_selection a {
   cursor: pointer;
