@@ -17,7 +17,8 @@ angular
         'ngSanitize',
         'ngTouch',
         'churchMouseFilters',
-        'financeServices'
+        'financeServices',
+        'greeterService'
     ])
     .config(function ($routeProvider) {
         $routeProvider
@@ -36,6 +37,10 @@ angular
         .when('/invoice', {
             templateUrl: 'views/invoice.html',
             controller: 'InvoiceCtrl'
+        })
+        .when('/forms', {
+            templateUrl: 'views/forms.html',
+            controller: 'FormsCtrl'
         })
         .otherwise({
             redirectTo: '/'

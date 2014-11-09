@@ -10,7 +10,6 @@
 
 angular.module('churchMouseApp')
     .controller('InvoiceCtrl', ['$scope', 'currencyConverter', function ($scope, currencyConverter) {
-        window.console.log('foo');
         $scope.foo = 'foo';
         $scope.quantity = 1;
         $scope.cost = 2;

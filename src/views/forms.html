@@ -1,0 +1,38 @@
+
+<div class="bellmaker_container">
+    <h1>Forms View</h1>
+    <p>{{ foo }}</p>
+    <form novalidate class="simple_form">
+        <label>
+            <span>Name:</span>
+            <input required type="text" ng-model="user.name" placeholder="enter your name" />
+        </label>
+        <label>
+            <span>Email:</span>
+            <input required type="email" ng-model="user.email" placeholder="enter your email" />
+        </label>
+        <label>
+            <span>Gender:</span>
+            <input type="radio" ng-model="user.gender" value="male" />Male
+            <input type="radio" ng-model="user.gender" value="female" />Female
+        </label>
+        <button ng-click="reset()">Reset</button>
+        <button ng-click="save(user)">Save</button>
+
+    </form>
+    <pre>form = {{ user | json }}</pre>
+    <pre>master = {{ master | json }}</pre>
+</div>
+
+<style type="text/css">
+    label {
+        display: block;
+        clear: both;
+    }
+    input.ng-invalid.ng-dirty {
+        border-color: #C00;
+    }
+    input.ng-valid.ng-dirty {
+        border-color: #0C0;
+    }
+</style>

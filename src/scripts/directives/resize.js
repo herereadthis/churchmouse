@@ -1,6 +1,6 @@
 'use strict';
 
-
+// draws heavily from http://jsfiddle.net/jaredwilli/SfJ8c/
 angular.module('churchMouseApp')
     .directive('resize', ['$window', function($window) {
         return function(scope) {

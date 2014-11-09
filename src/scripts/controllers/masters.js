@@ -7,8 +7,6 @@ angular.module('churchMouseApp')
             $scope.selectedTab = $scope.masters[0].id;
             $scope.initialDescription = $scope.masters[0].description;
             $scope.masterDescription = $scope.initialDescription;
-            console.log($scope.initialMaster);
-
 
             $scope.toggleMaster = function(masterId) {
                 var _i, index;
