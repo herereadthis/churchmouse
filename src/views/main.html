@@ -29,9 +29,7 @@
     </div>
 </div>
 
-<div class="bellmaker_container">
-    <div id="foobar"></div>
-</div>
+
 
 <article id="wabi_sabi">
     <div class="bellmaker_container">
@@ -46,6 +44,23 @@
 </article>
 
 
+<div ng-controller="MastersController">
+    <article id="lineage">
+        <div class="bellmaker_container">
+            <section class="bellmaker_container">
+                <h2>Our Kyudo Lineage</h2>
+                <ul id="master_selection">
+                    <li ng-repeat="master in masters" ng-class="{selected: master.id === selectedTab}">
+                        <a ng-click="toggleMaster(master.id)">{{ master.name }}</a>
+                    </li>
+                </ul>
+                <div id="master_description" ng-bind-html="masterDescription"></div>
+            </section>
+        </div>
+    </article>
+</div>
+
+
 <article id="kasumi">
     <section class="bellmaker_container">
         <p>Foo</p>
@@ -53,19 +68,6 @@
 </article>
 
 
-<div ng-controller="MastersController">
-    <article id="lineage">
-        <section class="bellmaker_container">
-            <h2>Our Kyudo Lineage</h2>
-            <ul id="master_selection">
-                <li ng-repeat="master in masters" ng-class="{selected: master.id === selectedTab}">
-                    <a ng-click="toggleMaster(master.id)">{{ master.name }},{{ master.id }}</a>
-                </li>
-            </ul>
-            <div id="master_description" ng-bind-html="masterDescription"></div>
-        </section>
-    </article>
-</div>
 
 
 

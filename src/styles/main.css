@@ -112,10 +112,15 @@ pre > code {
 p {
   font-size: 1.6rem;
   line-height: 2.4rem;
-  margin-bottom: 2.4rem;
+  padding-bottom: 2.4rem;
 }
 article {
   clear: both;
+}
+body {
+  background-image: linear-gradient(90deg, #aaaaaa 0%, #aaaaaa 100%);
+  background-repeat: repeat-y;
+  background-size: 0.2rem 0.2rem;
 }
 #photo_switcher {
   width: 33.3333vw;
@@ -134,17 +139,6 @@ article {
   background-repeat: repeat-y;
   position: relative;
   background-size: 0.2rem 1rem;
-}
-.bellmaker_container:before {
-  display: block;
-  content: "";
-  background-color: #aaaaaa;
-  width: 0.2rem;
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  left: -0.2rem;
-  z-index: 10;
 }
 @media only screen and (min-width: 768px) {
   .bellmaker_container {
@@ -518,7 +512,7 @@ article {
   line-height: 2.4rem;
   text-align: right;
   margin-right: 0.2rem;
-  padding-right: 1.8rem;
+  padding: 0.6rem 1.8rem 0.6rem 0;
 }
 #master_selection li.selected {
   background-color: #EEE;
@@ -528,6 +522,7 @@ article {
 }
 #master_description {
   float: left;
+  padding-top: 0.6rem;
 }
 @media only screen and (min-width: 768px) {
   #master_description {
