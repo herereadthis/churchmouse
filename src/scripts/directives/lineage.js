@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('churchMouseApp')
-    .controller('MainCtrl', ['$scope', function($scope) {
+    .controller('MainCtrl', ['$scope', 'Lineage', function($scope, Lineage) {
         $scope.customer = {
             name: 'Naomi',
             address: '1600 Amphitheatre'
@@ -14,8 +14,15 @@ angular.module('churchMouseApp')
             name: 'Igor',
             address: '123 Somewhere'
         };
+        $scope.lineage = Lineage.query();
+        $scope.lineage.$promise.then(function(result) {
+            $scope.lineage = result;
+            $scope.selectedTab = $scope.lineage[0].id;
+            $scope.initialDescription = $scope.lineage[0].description;
+            $scope.masterDescription = $scope.initialDescription;
+        });
     }])
-    .directive('fooBar', function() {
+    .directive('lineageArticle', function() {
         return {
             // restrict A takes <div my-directive />
             // restrict E takes <my-directive />
@@ -23,8 +30,9 @@ angular.module('churchMouseApp')
             scope: {
                 // = shorthand because attribute is the same name as value in scope
                 // e.g., <foo-bar customer-info="naomi" />
-                customerInfo: '='
+                lineageInfo: '=',
+                masterDescription: '='
             },
-            templateUrl: '/views/foobar.html'
+            templateUrl: '/views/lineage.html'
         };
     });

@@ -18,7 +18,8 @@ angular
         'ngTouch',
         'churchMouseFilters',
         'financeServices',
-        'greeterService'
+        'greeterService',
+        'lineageService'
     ])
     .config(function ($routeProvider) {
         $routeProvider
