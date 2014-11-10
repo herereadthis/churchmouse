@@ -43,6 +43,10 @@ angular
             templateUrl: 'views/forms.html',
             controller: 'FormsCtrl'
         })
+        .when('/time', {
+            templateUrl: 'views/time.html',
+            controller: 'TimeController'
+        })
         .otherwise({
             redirectTo: '/'
         });
