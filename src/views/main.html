@@ -50,11 +50,11 @@
             <section class="bellmaker_container">
                 <h2>Our Kyudo Lineage</h2>
                 <ul id="master_selection">
-                    <li ng-repeat="master in masters" ng-class="{selected: master.id === selectedTab}">
-                        <a ng-click="toggleMaster(master.id)">{{ master.name }}</a>
+                    <li data-ng-repeat="master in masters" data-ng-class="{selected: master.id === selectedTab}">
+                        <a data-ng-click="toggleMaster(master.id)" ng-bind="master.name"></a>
                     </li>
                 </ul>
-                <div id="master_description" ng-bind-html="masterDescription"></div>
+                <div id="master_description" data-ng-bind-html="masterDescription"></div>
             </section>
         </div>
     </article>

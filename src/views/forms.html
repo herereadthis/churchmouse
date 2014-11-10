@@ -2,22 +2,38 @@
 <div class="bellmaker_container">
     <h1>Forms View</h1>
     <p>{{ foo }}</p>
-    <form novalidate class="simple_form">
+    <form name="userForm" novalidate class="simple_form">
         <label>
-            <span>Name:</span>
-            <input required type="text" ng-model="user.name" placeholder="enter your name" />
+            <span>Name</span>
+            <input required type="text" ng-model="user.name"
+                name="userName" placeholder="enter your name" />
         </label>
         <label>
-            <span>Email:</span>
-            <input required type="email" ng-model="user.email" placeholder="enter your email" />
+            <span>Email</span>
+            <input required type="email" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }"
+                name="userEmail" placeholder="enter your email" />
+            <div ng-show="userForm.userEmail.$dirty && userForm.userEmail.$invalid">
+                <span>Invalid:</span>
+                <span ng-show="userForm.userEmail.$error.required">please supply email</span>
+                <span ng-show="userForm.userEmail.$error.email">please enter valid email</span>
+            </div>
         </label>
         <label>
-            <span>Gender:</span>
+            <span>Gender</span>
             <input type="radio" ng-model="user.gender" value="male" />Male
             <input type="radio" ng-model="user.gender" value="female" />Female
         </label>
-        <button ng-click="reset()">Reset</button>
-        <button ng-click="save(user)">Save</button>
+        <label>
+            <span>TOS</span>
+            <input type="checkbox" ng-model="user.agree" name="userAgree" required /> I agree
+            <input type="text" ng-model="user.signature" ng-show="user.agree" required />
+            <div ng-show="!user.agree || !user.signature">
+                <span>Please agree and give signature</span>
+            </div>
+        </label>
+        <button ng-click="reset()" ng-disabled="isUnchanged(user)">Reset</button>
+        <button ng-click="save(user)"
+            ng-disabled="userForm.$invalid || isUnchanged(user)">Save</button>
 
     </form>
     <pre>form = {{ user | json }}</pre>
