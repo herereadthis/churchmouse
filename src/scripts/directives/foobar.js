@@ -14,6 +14,11 @@ angular.module('churchMouseApp')
             name: 'Igor',
             address: '123 Somewhere'
         };
+        $scope.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
     }])
     .directive('fooBar', function() {
         return {

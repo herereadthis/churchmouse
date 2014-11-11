@@ -8,6 +8,11 @@ angular.module('churchMouseApp')
             foo: 'foo',
             bar: 'bar'
         };
+        $scope.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
     }])
     .directive('pageArticle', function() {
         return {

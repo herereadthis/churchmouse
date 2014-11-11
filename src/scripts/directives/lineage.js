@@ -21,6 +21,11 @@ angular.module('churchMouseApp')
             $scope.initialDescription = $scope.lineage[0].description;
             $scope.masterDescription = $scope.initialDescription;
         });
+        $scope.awesomeThings = [
+            'HTML5 Boilerplate',
+            'AngularJS',
+            'Karma'
+        ];
     }])
     .directive('lineageArticle', function() {
         return {
