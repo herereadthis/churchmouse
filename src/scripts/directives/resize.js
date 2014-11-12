@@ -3,6 +3,29 @@
 // draws heavily from http://jsfiddle.net/jaredwilli/SfJ8c/
 angular.module('churchMouseApp')
     .directive('resize', ['$window', function($window) {
+        /*
+        return {
+            link: function(scope, element, attrs) {
+                var w, breakpoints, bellmaker, getWindowDimensions;
+
+                w = $window;
+
+                breakpoints = [768, 1024, 1280, 1440];
+                bellmaker = [768, 960, 1152, 1344];
+
+
+                var foop = scope.getWindowDimensions();
+            }
+            controller: function(scope) {
+                $scope.getWindowDimensions = function() {
+                    return {
+                        'h': w.height(),
+                        'w': w.width()
+                    };
+                };
+            }
+        };
+        */
         return function(scope) {
             var w = angular.element($window);
             scope.breakpoints = [768, 1024, 1280, 1440];
