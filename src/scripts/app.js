@@ -32,7 +32,7 @@ angular
             controller: 'AboutCtrl'
         })
         .when('/funtime', {
-            templateUrl: 'views/funtime.html',
+            templateUrl: 'scripts/components/funtime/funtime.html',
             controller: 'FunTimeCtrl'
         })
         .when('/invoice', {
@@ -46,6 +46,10 @@ angular
         .when('/time', {
             templateUrl: 'views/time.html',
             controller: 'TimeController'
+        })
+        .when('/transclude', {
+            templateUrl: 'scripts/components/transclude/transclude.html',
+            controller: 'TranscludeController'
         })
         .otherwise({
             redirectTo: '/'
