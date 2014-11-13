@@ -31,6 +31,10 @@ angular
             templateUrl: 'views/about.html',
             controller: 'AboutCtrl'
         })
+        .when('/drag', {
+            templateUrl: 'scripts/components/drag/my-draggable.html',
+            controller: 'DragController'
+        })
         .when('/funtime', {
             templateUrl: 'scripts/components/funtime/funtime.html',
             controller: 'FunTimeCtrl'
