@@ -47,6 +47,10 @@ angular
             templateUrl: 'views/forms.html',
             controller: 'FormsCtrl'
         })
+        .when('/tabs', {
+            templateUrl: 'scripts/components/tabs/tabs.html',
+            controller: 'TabsController'
+        })
         .when('/time', {
             templateUrl: 'views/time.html',
             controller: 'TimeController'
