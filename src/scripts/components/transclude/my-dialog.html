@@ -1,5 +1,7 @@
 <div class="alert" >
-    <!-- close is in the direcive scope -->
+    <!-- close is in the directive scope -->
     <a href class="close" ng-click="close()">&times;</a>
+    <!-- ng-transclude means take the contets of the directive, that is,
+    whatver is inside <my dialog /> -->
     <div ng-transclude></div>
 </div>

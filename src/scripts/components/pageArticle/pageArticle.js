@@ -2,17 +2,12 @@
 
 // draws heavily from http://jsfiddle.net/jaredwilli/SfJ8c/
 angular.module('churchMouseApp')
-    .controller('MainCtrl', ['$scope', function($scope) {
+    .controller('pageArticleController', ['$scope', function($scope) {
         $scope.lineage = {
             name: 'lineage',
             foo: 'foo',
             bar: 'bar'
         };
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
     }])
     .directive('pageArticle', function() {
         return {
@@ -20,6 +15,12 @@ angular.module('churchMouseApp')
             scope: {
                 articleName: '='
             },
-            templateUrl: '/views/page-article.html'
+            link: function(scope, element, attrs) {
+                element.find('.bellmaker_container').css({
+                    height: 'auto',
+                    minHeight: '0'
+                });
+            },
+            templateUrl: '/scripts/components/pageArticle/page-article.html'
         };
     });

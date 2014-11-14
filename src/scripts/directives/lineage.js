@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('churchMouseApp')
-    .controller('MainCtrl', ['$scope', 'Lineage', function($scope, Lineage) {
+    .controller('LineageArticleController', ['$scope', 'Lineage', function($scope, Lineage) {
         $scope.customer = {
             name: 'Naomi',
             address: '1600 Amphitheatre'
@@ -14,6 +14,7 @@ angular.module('churchMouseApp')
             name: 'Igor',
             address: '123 Somewhere'
         };
+        window.alert('asdfasfdf');
         $scope.lineage = Lineage.query();
         $scope.lineage.$promise.then(function(result) {
             $scope.lineage = result;
@@ -21,11 +22,6 @@ angular.module('churchMouseApp')
             $scope.initialDescription = $scope.lineage[0].description;
             $scope.masterDescription = $scope.initialDescription;
         });
-        $scope.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
     }])
     .directive('lineageArticle', function() {
         return {
@@ -37,6 +33,12 @@ angular.module('churchMouseApp')
                 // e.g., <foo-bar customer-info="naomi" />
                 lineageInfo: '=',
                 masterDescription: '='
+            },
+            link: function(scope, element) {
+                element.find('.bellmaker_container').css({
+                    height: 'auto',
+                    minHeight: '0'
+                });
             },
             templateUrl: '/views/lineage.html'
         };

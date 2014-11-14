@@ -1,19 +1,23 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name churchMouseApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the churchMouseApp
- */
+
 angular.module('churchMouseApp')
-    .controller('MainCtrl', ['$scope', 'greeter', function ($scope, greeter) {
+    .controller('MainController', [
+        '$scope',
+        '$window',
+        'greeter',
+        'Lineage',
+        function ($scope, $window, greeter, Lineage) {
+
+        $window.console.log('asdf');
         $scope.awesomeThings = [
-            'HTML5 Boilerplate',
+            '12345678',
             'AngularJS',
             'Karma'
         ];
+        $window.console.log('asdf');
+        $scope.masters = Lineage.query();
+        window.console.log($scope.masters);
         // greeter service!
         greeter.greet('world');
     }]);

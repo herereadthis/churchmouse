@@ -1,5 +1,5 @@
 
-<p>{{ breakpoints}}</p>
+<!--<p>{{ breakpoints}}</p>-->
 
 
 
@@ -43,7 +43,19 @@
     </div>
 </article>
 
+<p>master directive</p>
+<article id="lineage">
+    <div class="bellmaker_container">
+        <tabbed-content>
+            <tabbed-pane ng-repeat="master in masters" title="{{ master.name }}">
+                <div ng-bind-html="master.description"></div>
+            </tabbed-pane>
+        </tabbed-content>
+    </div>
+</article>
 
+
+<!--
 <div ng-controller="MastersController">
     <article id="lineage">
         <div class="bellmaker_container">
@@ -59,7 +71,7 @@
         </div>
     </article>
 </div>
-
+-->
 
 <div>
     <article>
@@ -80,13 +92,20 @@
 
 
 
+
+<div ng-controller="pageArticleController">
 <div page-article>Page Article</div>
+</div>
 
+
+
+
+<!--
+<div ng-controller="LineageArticleController">
 <lineage-article lineage-info="lineage" master-description='masterDescription'></lineage-article>
+</div>
+-->
 
-<div style="clear: both;height: 50rem;"></div>
-
-<h1 style="float: right;">Kyudo</h1>
 
 
 <div id="photo_switcher">
@@ -112,18 +131,6 @@
 </div>
 
 
-
-
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">foo</h3>
-      </div>
 
 
 

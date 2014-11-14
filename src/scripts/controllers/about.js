@@ -10,7 +10,7 @@
 angular.module('churchMouseApp')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
-      'HTML5 Boilerplate',
+      'HTML5 foo',
       'AngularJS',
       'Karma'
     ];
