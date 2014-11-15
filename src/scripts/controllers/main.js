@@ -9,13 +9,13 @@ angular.module('churchMouseApp')
         'Lineage',
         function ($scope, $window, greeter, Lineage) {
 
-        $window.console.log('asdf');
+        // $window.console.log('asdf');
         $scope.awesomeThings = [
             '12345678',
             'AngularJS',
             'Karma'
         ];
-        $window.console.log('asdf');
+        // $window.console.log('asdf');
         $scope.masters = Lineage.query();
         window.console.log($scope.masters);
         // greeter service!

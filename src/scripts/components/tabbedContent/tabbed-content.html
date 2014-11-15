@@ -1,3 +1,8 @@
 <div class="tabbed_content_container">
+    <ul class="tabbed_content_links sunflash_navmenu">
+        <li ng-repeat="pane in panes" ng-class="{selected:pane.selected}">
+            <a href="" ng-click="select(pane)">{{ pane.title }}</a>
+        </li>
+    </ul>
     <div class="tabbed_content" ng-transclude></div>
 </div>

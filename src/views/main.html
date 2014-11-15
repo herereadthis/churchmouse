@@ -43,35 +43,19 @@
     </div>
 </article>
 
-<p>master directive</p>
+
 <article id="lineage">
     <div class="bellmaker_container">
-        <tabbed-content>
-            <tabbed-pane ng-repeat="master in masters" title="{{ master.name }}">
-                <div ng-bind-html="master.description"></div>
+        <h2>Our Kyudo Lineage</h2>
+        <tabbed-content orientation="vertical">
+            <tabbed-pane data-ng-repeat="master in masters" title="{{ master.name }}">
+                <div data-ng-bind-html="master.description"></div>
             </tabbed-pane>
         </tabbed-content>
     </div>
 </article>
 
 
-<!--
-<div ng-controller="MastersController">
-    <article id="lineage">
-        <div class="bellmaker_container">
-            <section class="bellmaker_container">
-                <h2>Our Kyudo Lineage</h2>
-                <ul id="master_selection">
-                    <li data-ng-repeat="master in masters" data-ng-class="{selected: master.id === selectedTab}">
-                        <a data-ng-click="toggleMaster(master.id)" ng-bind="master.name"></a>
-                    </li>
-                </ul>
-                <div id="master_description" data-ng-bind-html="masterDescription"></div>
-            </section>
-        </div>
-    </article>
-</div>
--->
 
 <div>
     <article>
