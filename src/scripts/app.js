@@ -24,6 +24,7 @@ angular
     .config(function ($routeProvider) {
         $routeProvider
         .when('/', {
+            title: '',
             templateUrl: 'views/main.html',
             controller: 'MainController'
         })
@@ -60,10 +61,21 @@ angular
             controller: 'TimeController'
         })
         .when('/transclude', {
+            title: 'Transclude View',
             templateUrl: 'scripts/components/transclude/transclude.html',
             controller: 'TranscludeController'
         })
         .otherwise({
             redirectTo: '/'
         });
-    });
+    })
+    .run(['$location', '$rootScope', function($location, $rootScope) {
+        $rootScope.$on('$routeChangeSuccess', function (event, current) {
+            var viewTitle = current.$$route.title,
+                defaultTitle = 'Northern Virginia Kyudo Renmei';
+            $rootScope.title = defaultTitle;
+            if (viewTitle !== '') {
+                $rootScope.title = viewTitle + ' &mdash; ' + defaultTitle;
+            }
+        });
+    }]);

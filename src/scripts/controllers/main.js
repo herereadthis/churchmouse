@@ -20,3 +20,18 @@ angular.module('churchMouseApp')
         // greeter service!
         greeter.greet('world');
     }]);
+    /*
+    .factory('smartBanner', function() {
+        return {
+            title: ''
+        };
+    })
+    .directive('smartBanner', function(smartBanner) {
+        return {
+            restrict: 'A',
+            link: function(scope) {
+                scope.smartbanner = 'asdf';
+            }
+        };
+    });
+*/
