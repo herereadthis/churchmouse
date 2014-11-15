@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('churchMouseApp')
-    .controller('MainCtrl', ['$scope', function($scope) {
+    .controller('FoobarController', ['$scope', function($scope) {
         $scope.customer = {
             name: 'Naomi',
             address: '1600 Amphitheatre'
@@ -30,6 +30,6 @@ angular.module('churchMouseApp')
                 // e.g., <foo-bar customer-info="naomi" />
                 customerInfo: '='
             },
-            templateUrl: '/views/foobar.html'
+            templateUrl: '/scripts/components/foobar/foobar.html'
         };
     });

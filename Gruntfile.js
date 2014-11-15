@@ -292,7 +292,7 @@ module.exports = function (grunt) {
           src: [
             '*.html',
             'views/{,*/}*.html', 
-            'scripts/**/*.html'
+            'scripts/components/{,*/}*.html'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -332,7 +332,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'scripts/{,*/}*.html',
+            'scripts/components/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*',
             'json/*'
