@@ -17,7 +17,6 @@ angular.module('churchMouseApp')
         ];
         // $window.console.log('asdf');
         $scope.masters = Lineage.query();
-        window.console.log($scope.masters);
         // greeter service!
         greeter.greet('world');
     }]);

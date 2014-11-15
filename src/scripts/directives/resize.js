@@ -1,62 +1,48 @@
 'use strict';
 
-// draws heavily from http://jsfiddle.net/jaredwilli/SfJ8c/
+// inspired by http://jsfiddle.net/jaredwilli/SfJ8c/
 angular.module('churchMouseApp')
     .directive('resize', ['$window', function($window) {
-        /*
+        // window.console.log($window.width());
         return {
-            link: function(scope, element, attrs) {
-                var w, breakpoints, bellmaker, getWindowDimensions;
+            link: function(scope, element) {
+                var w, breakpoints, bellmaker;
 
-                w = $window;
+                w = angular.element($window);
 
                 breakpoints = [768, 1024, 1280, 1440];
                 bellmaker = [768, 960, 1152, 1344];
 
+                scope.backgroundPos = function() {
+                    var windowWidth, windowHeight;
 
-                var foop = scope.getWindowDimensions();
-            }
-            controller: function(scope) {
-                $scope.getWindowDimensions = function() {
-                    return {
-                        'h': w.height(),
-                        'w': w.width()
+                    scope.windowDimensions = {
+                        w: w.width(),
+                        h: w.height()
                     };
-                };
-            }
-        };
-        */
-        return function(scope) {
-            var w = angular.element($window);
-            scope.breakpoints = [768, 1024, 1280, 1440];
-            scope.bellmaker = [768, 960, 1152, 1344];
-            scope.getWindowDimensions = function() {
-                return {
-                    'h': w.height(),
-                    'w': w.width()
-                };
-            };
-            scope.$watch(scope.getWindowDimensions, function(dimensions) {
-                scope.windowHeight = dimensions.h;
-                scope.windowWidth = dimensions.w;
 
-                scope.backgroundPosition = function() {
+                    windowHeight = scope.windowDimensions.h;
+                    windowWidth = scope.windowDimensions.w;
+
                     var _i, bellIndex, bgPos;
-                    if (scope.windowWidth >= scope.breakpoints[0]) {
-                        for (_i in scope.breakpoints) {
-                            if (scope.windowWidth >= scope.breakpoints[_i]) {
+                    if (windowWidth >= breakpoints[0]) {
+                        for (_i in breakpoints) {
+                            if (windowWidth >= breakpoints[_i]) {
                                 bellIndex = _i;
                             }
                         }
-                        bgPos = Math.round((scope.windowWidth - scope.bellmaker[bellIndex]) / 2) - 2;
-                        return {
-                            'background-position': bgPos + 'px'
-                        };
+                        bgPos = Math.round((windowWidth - bellmaker[bellIndex]) / 2) - 2;
+                        element.css({
+                            backgroundPosition: bgPos + 'px'
+                        });
                     }
+
                 };
-            }, true);
-            w.on('resize', function() {
-                scope.$apply();
-            });
+                scope.backgroundPos();
+
+                w.on('resize', function() {
+                    scope.backgroundPos();
+                });
+            }
         };
     }]);

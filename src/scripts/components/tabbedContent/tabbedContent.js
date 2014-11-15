@@ -22,7 +22,6 @@ angular.module('churchMouseApp')
 
                 // "this" is the controller constructor
                 this.addPane = function(pane) {
-                    window.console.log('fooo');
                     // panes is $scope.panes, which is initially an empty array
                     if ($scope.panes.length === 0) {
                         $scope.select(pane);
