@@ -29,6 +29,7 @@ angular
             controller: 'MainController'
         })
         .when('/about', {
+            title: 'About Us',
             templateUrl: 'views/about.html',
             controller: 'AboutCtrl'
         })
@@ -69,13 +70,18 @@ angular
             redirectTo: '/'
         });
     })
+    // http://stackoverflow.com/questions/12506329/
+    // how-to-dynamically-change-header-based-on-angularjs-partial-view
     .run(['$location', '$rootScope', function($location, $rootScope) {
         $rootScope.$on('$routeChangeSuccess', function (event, current) {
             var viewTitle = current.$$route.title,
                 defaultTitle = 'Northern Virginia Kyudo Renmei';
-            $rootScope.title = defaultTitle;
+            
             if (viewTitle !== '') {
                 $rootScope.title = viewTitle + ' &mdash; ' + defaultTitle;
+            }
+            else {
+                $rootScope.title = defaultTitle;
             }
         });
     }]);

@@ -1,12 +1,18 @@
 #kasumi {
     min-height: 102vh;
     background-image:
-        url("/images/kasumi_mato.svg"),
         linear-gradient(90deg, #FFF 0%, #FFF 50%, @color_triad_3 50%, @color_triad_3 100%);
     background-repeat: no-repeat;
     background-position: 0 center;
 
-    section {
+    [data-bellmaker-background] {
+        background-image:
+            url("/images/kasumi_mato.svg");
+        background-repeat: no-repeat;
+        background-position: 0 center;
+    }
+
+    .bellmaker_container {
         background-color: @color_triad_4;
         min-height: 102vh;
         background-image:
@@ -17,7 +23,10 @@
         box-sizing: border-box;
     }
     @media @da_medium {
-        section {
+        [data-bellmaker-background] {
+            background-size: 72rem;
+        }
+        .bellmaker_container {
             padding-left: 48rem;
             background-position: -40rem center;
             background-size: 72rem;
