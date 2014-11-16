@@ -1,7 +1,9 @@
 #kasumi {
-    min-height: 102vh;
+    // min-height: 102vh;
     background-image:
         linear-gradient(90deg, #FFF 0%, #FFF 50%, @color_triad_3 50%, @color_triad_3 100%);
+    background-image:
+        linear-gradient(90deg, @color_triad_3 0%, @color_triad_3 100%);
     background-repeat: no-repeat;
     background-position: 0 center;
 
@@ -10,26 +12,50 @@
             url("/images/kasumi_mato.svg");
         background-repeat: no-repeat;
         background-position: 0 center;
+        background-attachment: fixed;
     }
 
     .bellmaker_container {
         background-color: @color_triad_4;
-        min-height: 102vh;
+        // min-height: 102vh;
         background-image:
             url("/images/kasumi_mato.svg");
         background-repeat: no-repeat;
         background-position: 0 center;
+        background-attachment: fixed;
 
         box-sizing: border-box;
     }
+    @media @da_small {
+        [data-bellmaker-background], .bellmaker_container {
+            background-size: 48rem;
+        }
+        .bellmaker_container {
+            height: 475px;
+        }
+    }
     @media @da_medium {
-        [data-bellmaker-background] {
+        [data-bellmaker-background], .bellmaker_container {
+            background-size: 60rem;
+        }
+        .bellmaker_container {
+            height: 594px;
+        }
+    }
+    @media @da_large {
+        [data-bellmaker-background], .bellmaker_container {
             background-size: 72rem;
         }
         .bellmaker_container {
-            padding-left: 48rem;
-            background-position: -40rem center;
-            background-size: 72rem;
+            height: 712px;
+        }
+    }
+    @media @da_x_large {
+        [data-bellmaker-background], .bellmaker_container {
+            background-size: 86rem;
+        }
+        .bellmaker_container {
+            height: 844px;
         }
     }
     p {

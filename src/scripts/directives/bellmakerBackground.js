@@ -13,7 +13,9 @@ angular.module('churchMouseApp')
 
                 w = angular.element($window);
 
-                offsetX = scope.bellmakerBackground;
+                // if passing array, put it in quotes, eg. ="'[1,2,3,4]'"
+                offsetX = JSON.parse(scope.bellmakerBackground);
+                // window.console.log(offsetX.length);
 
                 scope.backgroundPos = function(offsetX, offsetY) {
                     var windowWidth, windowHeight, breakpoints, bellmaker, x,
@@ -39,12 +41,14 @@ angular.module('churchMouseApp')
                             }
                         }
                         if (offsetX.length === bellmaker.length) {
-                            x = offsetX[_i];
+                            x = offsetX[bellIndex];
+                            window.console.log(x, bellIndex);
                         }
                         else {
                             x = offsetX;
+                            // window.console.log(x);
                         }
-                        bgPos = Math.round((windowWidth - bellmaker[bellIndex]) / 2) + offsetX;
+                        bgPos = Math.round((windowWidth - bellmaker[bellIndex]) / 2) + x;
                         element.css({
                             backgroundPosition: bgPos + 'px ' + offsetY
                         });
