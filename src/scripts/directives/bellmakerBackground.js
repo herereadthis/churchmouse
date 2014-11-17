@@ -15,7 +15,6 @@ angular.module('churchMouseApp')
 
                 // if passing array, put it in quotes, eg. ="'[1,2,3,4]'"
                 offsetX = JSON.parse(scope.bellmakerBackground);
-                // window.console.log(offsetX.length);
 
                 scope.backgroundPos = function(offsetX, offsetY) {
                     var windowWidth, windowHeight, breakpoints, bellmaker, x,
@@ -42,21 +41,19 @@ angular.module('churchMouseApp')
                         }
                         if (offsetX.length === bellmaker.length) {
                             x = offsetX[bellIndex];
-                            window.console.log(x, bellIndex);
                         }
                         else {
                             x = offsetX;
-                            // window.console.log(x);
                         }
                         bgPos = Math.round((windowWidth - bellmaker[bellIndex]) / 2) + x;
                         element.css({
                             backgroundPosition: bgPos + 'px ' + offsetY
                         });
                     }
-
                 };
-                scope.backgroundPos(offsetX);
-
+                w.on('load', function() {
+                    scope.backgroundPos(offsetX);
+                });
                 w.on('resize', function() {
                     scope.backgroundPos(offsetX);
                 });
