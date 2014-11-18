@@ -37,6 +37,10 @@ angular
             templateUrl: 'scripts/components/drag/my-draggable.html',
             controller: 'DragController'
         })
+        .when('/faq', {
+            templateUrl: 'views/faq.html',
+            controller: 'FaqController'
+        })
         .when('/foobar', {
             templateUrl: 'scripts/components/foobar/foobar-view.html',
             controller: 'FoobarController'
