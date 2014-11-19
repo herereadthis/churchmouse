@@ -49,6 +49,10 @@ angular
             templateUrl: 'scripts/components/funtime/funtime.html',
             controller: 'FunTimeCtrl'
         })
+        .when('/history', {
+            templateUrl: 'views/history.html',
+            controller: 'HistoryController'
+        })
         .when('/invoice', {
             templateUrl: 'views/invoice.html',
             controller: 'InvoiceCtrl'
