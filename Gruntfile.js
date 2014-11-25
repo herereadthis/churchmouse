@@ -43,6 +43,10 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         }
       },
+      json: {
+        files: ['<%= yeoman.app %>/json/{,*/}*.json'],
+        tasks: ['newer:copy:json']
+      },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
@@ -343,6 +347,12 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
         }]
+      },
+      json: {
+        expand: true,
+        cwd: '<%= yeoman.app %>/json',
+        dest: '.tmp/json/',
+        src: '{,*/}*.json'
       },
       styles: {
         expand: true,

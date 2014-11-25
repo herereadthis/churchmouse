@@ -19,6 +19,7 @@ angular
         'churchMouseFilters',
         'financeServices',
         'greeterService',
+        'faqService',
         'lineageService'
     ])
     .config(function ($routeProvider) {
