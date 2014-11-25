@@ -72,6 +72,7 @@ module.exports = function (grunt) {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
           '<%= yeoman.app %>/scripts/components/**/*.html',
+          '.tmp/json/{,*/}*.json',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -365,12 +366,15 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'copy:json',
         'copy:styles'
       ],
       test: [
+        'copy:json',
         'copy:styles'
       ],
       dist: [
+        'copy:json',
         'copy:styles',
         'imagemin',
         'svgmin'
