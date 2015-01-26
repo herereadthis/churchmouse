@@ -4,6 +4,8 @@
 // generator-karma 0.8.2
 
 module.exports = function(config) {
+  'use strict';
+  
   config.set({
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
@@ -19,7 +21,9 @@ module.exports = function(config) {
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/angular-animate/angular-animate.js',
+      'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-cookies/angular-cookies.js',
+      'bower_components/angular-messages/angular-messages.js',
       'bower_components/angular-resource/angular-resource.js',
       'bower_components/angular-route/angular-route.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
