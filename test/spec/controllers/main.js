@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Controller: MainController', function () {
+describe('Controller: MainCtrl', function () {
 
   // load the controller's module
   beforeEach(module('churchMouseApp'));
@@ -11,7 +11,7 @@ describe('Controller: MainController', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainController', {
+    MainCtrl = $controller('MainCtrl', {
       $scope: scope
     });
   }));
