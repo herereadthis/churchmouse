@@ -115,11 +115,6 @@ button:disabled {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
-p {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  padding-bottom: 2.4rem;
-}
 ul {
   padding-bottom: 2.4rem;
 }
@@ -134,10 +129,6 @@ body {
   background-image: linear-gradient(90deg, #aaaaaa 0%, #aaaaaa 100%);
   background-repeat: repeat-y;
   background-size: 0.2rem 0.2rem;
-}
-h1 {
-  font-size: 3.6rem;
-  line-height: 4.8rem;
 }
 h2 {
   font-size: 2.4rem;
@@ -200,58 +191,137 @@ a:hover {
     */
 }
 #banner_container {
-  background-image: linear-gradient(90deg, #55236c 0%, #55236c 100%);
-  background-repeat: no-repeat;
+  height: 100vh;
+  /*
+    background-image: linear-gradient(90deg, @color_kyudo_purple_1 0%, @color_kyudo_purple_1 100%);
+    background-repeat: no-repeat;
+
+
+    @media @da_small {
+        background-position: 0 8rem;
+        background-size: 100% @pw_small * 0.421875;
+    }
+    @media @da_medium {
+        background-size: 100% @pw_medium * 0.421875;
+    }
+    @media @da_large {
+        background-position: 0 10rem;
+        background-size: 100% @pw_large * 0.421875;
+    }
+    @media @da_x_large {
+        background-size: 100% @pw_x_large * 0.421875;
+    }  
+    */
+}
+#banner_container .bellmaker_container {
+  height: 100vh;
+}
+#kanji_box {
+  float: right;
 }
 @media only screen and (min-width: 768px) {
-  #banner_container {
-    background-position: 0 8rem;
-    background-size: 100% 32.4rem;
+  #kanji_box {
+    width: 19.2rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  #banner_container {
-    background-size: 100% 40.5rem;
+  #kanji_box {
+    width: 24rem;
   }
 }
 @media only screen and (min-width: 1280px) {
-  #banner_container {
-    background-position: 0 10rem;
-    background-size: 100% 48.6rem;
+  #kanji_box {
+    width: 28.8rem;
   }
 }
 @media only screen and (min-width: 1440px) {
-  #banner_container {
-    background-size: 100% 56.7rem;
+  #kanji_box {
+    width: 33.6rem;
   }
 }
 @media only screen and (min-width: 768px) {
-  .bellmaker_container,
-  #kyudo_kanji {
-    min-height: 49.1rem;
+  #kanji_box {
+    height: 100vh;
+  }
+}
+#kanji_box img {
+  width: 100%;
+  margin-top: 5rem;
+}
+[role="banner"] {
+  float: right;
+}
+@media only screen and (min-width: 768px) {
+  [role="banner"] {
+    width: 57.6rem;
   }
 }
 @media only screen and (min-width: 1024px) {
-  .bellmaker_container,
-  #kyudo_kanji {
-    min-height: 57.2rem;
+  [role="banner"] {
+    width: 72rem;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .bellmaker_container,
-  #kyudo_kanji {
-    min-height: 67.3rem;
+  [role="banner"] {
+    width: 86.4rem;
   }
 }
 @media only screen and (min-width: 1440px) {
-  .bellmaker_container,
-  #kyudo_kanji {
-    min-height: 75.4rem;
+  [role="banner"] {
+    width: 100.8rem;
   }
 }
+@media only screen and (min-width: 768px) {
+  [role="banner"] {
+    height: 100vh;
+    margin-top: 10rem;
+  }
+  [role="banner"] h1 {
+    font-size: 3.6rem;
+    line-height: 4.8rem;
+  }
+  [role="banner"] p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  [role="banner"] h1 {
+    font-size: 4.8rem;
+    line-height: 6rem;
+  }
+  [role="banner"] p {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+/*
+@media @da_small {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 8rem + 8.7rem + @pw_small * 0.421875;
+    }
+}
+@media @da_medium {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 8rem + 8.7rem + @pw_medium * 0.421875;
+    }
+}
+@media @da_large {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 10rem + 8.7rem + @pw_large * 0.421875;
+    }
+}
+@media @da_x_large {
+    .bellmaker_container, #kyudo_kanji {
+        min-height: 10rem + 8.7rem + @pw_x_large * 0.421875;
+    }
+}
+*/
 #quick_info {
   width: 75%;
-  float: left;
+  float: right;
 }
 #quick_info p {
   padding: 1.5rem 0 0 1.5rem;
@@ -262,7 +332,7 @@ a:hover {
   content: "";
 }
 #kyudo_kanji {
-  float: left;
+  float: right;
   width: 25%;
   position: relative;
   background-image: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
@@ -355,29 +425,31 @@ a:hover {
 #kyudo_kanji img {
   width: 100%;
 }
-@media only screen and (min-width: 768px) {
-  [role="banner"] {
-    width: 75%;
-    float: left;
-    height: 8rem;
-  }
-  [role="banner"] h1 {
-    float: right;
-    font-size: 3rem;
-    line-height: 4rem;
-    padding-top: 4rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  [role="banner"] {
-    height: 10rem;
-  }
-  [role="banner"] h1 {
-    float: right;
-    font-size: 4rem;
-    line-height: 5rem;
-    padding-top: 5rem;
-  }
+[role="banner"] {
+  /*
+    @media @da_small {
+        width: 75%;
+        float: left;
+        height: 8rem;
+
+        h1 {
+            float: right;
+            font-size: 3rem;
+            line-height: 4rem;
+            padding-top: 4rem;
+        }
+    }
+    @media @da_large {
+        height: 10rem;
+
+        h1 {
+            float: right;
+            font-size: 4rem;
+            line-height: 5rem;
+            padding-top: 5rem;
+        }
+    }
+    */
 }
 #banner_images {
   width: 75%;

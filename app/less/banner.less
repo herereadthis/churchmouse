@@ -42,6 +42,12 @@ html {
 
 
 #banner_container {
+    height: 100vh;
+
+    .bellmaker_container {
+        height: 100vh;
+    }
+    /*
     background-image: linear-gradient(90deg, @color_kyudo_purple_1 0%, @color_kyudo_purple_1 100%);
     background-repeat: no-repeat;
 
@@ -60,8 +66,54 @@ html {
     @media @da_x_large {
         background-size: 100% @pw_x_large * 0.421875;
     }  
+    */
 }
 
+
+#kanji_box {
+    float: right;
+    .bellmaker_factor(width, 0.25);
+
+    @media @da_small {
+        height: 100vh; 
+    }
+
+    img {
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+[role="banner"] {
+    float: right;
+    .bellmaker_factor(width, 0.75);
+
+    @media @da_small {
+        height: 100vh;
+        margin-top: 10rem;
+
+        h1 {
+            font-size: 3.6rem;
+            line-height: 4.8rem;
+        }
+        p {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            padding-bottom: 2.4rem;
+        }
+    }    
+    @media @da_medium {
+        h1 {
+            font-size: 4.8rem;
+            line-height: 6rem;
+        }
+        p {
+            font-size: 2rem;
+            line-height: 3rem;
+            padding-bottom: 3rem;
+        }
+    }
+}
+/*
 @media @da_small {
     .bellmaker_container, #kyudo_kanji {
         min-height: 8rem + 8.7rem + @pw_small * 0.421875;
@@ -82,6 +134,7 @@ html {
         min-height: 10rem + 8.7rem + @pw_x_large * 0.421875;
     }
 }
+*/
 
 #quick_info {
     // text-align: right;
@@ -89,7 +142,7 @@ html {
     // right: 0;
     // bottom: 0;
     width: 75%;
-    float: left;
+    float: right;
 
     p {
         padding: 1.5rem 0 0 1.5rem;
@@ -104,7 +157,7 @@ html {
 }
 
 #kyudo_kanji {
-    float: left;
+    float: right;
     width: 25%;
     // background-color: #FFF;
     position: relative;
@@ -168,6 +221,7 @@ html {
 }
 
 [role="banner"] {
+    /*
     @media @da_small {
         width: 75%;
         float: left;
@@ -190,6 +244,7 @@ html {
             padding-top: 5rem;
         }
     }
+    */
 }
 #banner_images {
     width: 75%;
