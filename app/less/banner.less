@@ -20,7 +20,7 @@
         }
     }
     @media @da_small {
-        // width: 25%;
+        width: 25%;
         // height: 100vh;
         // 57.6rem;
         max-height: (3 / 4) * @pw_small;
@@ -103,9 +103,6 @@
             font-size: 3.6rem;
             line-height: 4.8rem;
         }
-        p {
-            padding-bottom: 2.4rem;
-        }
     }    
     @media @da_medium {
         h1 {
@@ -115,7 +112,6 @@
         }
         p {
             .font_subtitle;
-            padding-bottom: 3rem;
         }
     }
     @media @da_large {
@@ -146,11 +142,27 @@
         width: 75%;
     }
 
-    @media @da_medium {
+    @media @da_small {
+        margin-top: 6.4rem;
+
         li {
+            margin-left: 9.6rem;
+            
             a {
-                width: 24rem;
-                height: 16rem;
+                width: 19.2rem;
+                height: 12.8rem;
+            }
+        }
+    }
+    @media @da_medium {
+        margin-top: 6rem;
+        
+        li {
+            margin-left: 6rem;
+
+            a {
+                width: 18rem;
+                height: 12rem;
             }
         }
     }
