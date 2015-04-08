@@ -6,3 +6,4 @@ bower_components
 .DS_Store
 src/styles/main.css
 npm-debug.log
+app/styles/main.css
