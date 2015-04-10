@@ -10,15 +10,15 @@
             Practice: 3&ndash;6pm Saturdays</p>
         </header>
         <div id="kanji_box">
-            <img src=" /images/kyudo_kanji_600x1300.png" />
+            <img src="/images/kyudo_kanji_600x1300.png" />
         </div>
         <div id="banner_carousel">
             <ul>
-                <li><a href>1</a></li>
-                <li><a href>2</a></li>
-                <li><a href>3</a></li>
-                <li><a href>4</a></li>
-                <li><a href>5</a></li>
+                <li ng-repeat="image in imageCarousel">
+                    <a href title="image.description">
+                        <span ng-style="getBg(image)"></span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
