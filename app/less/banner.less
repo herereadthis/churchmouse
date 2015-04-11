@@ -19,6 +19,10 @@
             margin-top: 5vh;
         }
     }
+    @media @da_x_small {
+        width: 25%;
+        margin-left: 0;
+    }
     @media @da_small {
         width: 25%;
         // height: 100vh;
@@ -96,6 +100,9 @@
             }
         }
     }
+    @media @da_x_small {
+        width: 75%;
+    }
     @media @da_small {
         width: 75%;
 
@@ -134,19 +141,47 @@
 #banner_carousel {
 
     // display: none;
-    float: right;
 
     @media @da_baseline {
-        width: 75%; 
+        clear: both;
+        margin-top: 5vw;
+
+        li {
+            margin-left: 5vw;
+
+            a, span {
+                width: 90vw;
+                height: 60vw;
+            }
+            a {
+                margin-bottom: 5vw;
+            }
+        }
     }
     @media @da_2x_small {
         width: 78%;
     }
+    @media @da_x_small {
+        width: 75%;
+        float: right;
+        clear: none;
+        margin-top: 3vw;
+
+
+        li {
+            margin-left: 0;
+
+            a, span {
+                width: 72vw;
+                height: 48vw;
+            }
+            a {
+                margin-bottom: 3vw;
+            }
+        }
+    }
     @media @da_small {
         width: 75%;
-    }
-
-    @media @da_small {
         margin-top: 6.4rem;
 
         li {
@@ -219,23 +254,6 @@
         span {
             display: block;
             background-size: cover;
-        }
-
-
-        &:nth-child(3) {
-            a {
-                background-color: rgba(0,0,0,0.6); 
-            }
-        }
-        &:nth-child(4) {
-            a {
-                background-color: rgba(0,0,0,0.2); 
-            }
-        }
-        &:nth-child(5) {
-            a {
-                background-color: rgba(0,0,0,0.4); 
-            }
         }
     }
 }
