@@ -18,6 +18,13 @@
 
     }
     section {
+        @media @da_baseline {
+            padding: 0 2rem;
+
+            p {
+                padding-bottom: 2.4rem;
+            }
+        }
         @media @da_small {
             width: @pw_small * (14 / 16);
             padding-left: @pw_small * (1 / 16);
@@ -30,7 +37,7 @@
             p {
                 font-size: 1.8rem;
                 line-height: 2.4rem;
-                padding-bottom: 2.8rem;
+                padding-bottom: 2.4rem;
             }
         }
         @media @da_medium {
@@ -55,9 +62,3 @@
     }
 }
 
-
-#faq_page.home_page_article {
-    section {
-        min-height: 0;
-    }
-}

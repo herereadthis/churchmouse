@@ -28,12 +28,12 @@ angular.module('churchMouseApp')
             },
             {
                 id: 2,
-                src: '/images/placeholder_1008x567.jpg',
+                src: '/images/va1_432x288.jpg',
                 description: 'image'
             },
             {
                 id: 3,
-                src: '/images/placeholder_1008x567.jpg',
+                src: '/images/dsc5138_1800x1200.jpg',
                 description: 'image'
             },
             {
@@ -51,3 +51,4 @@ angular.module('churchMouseApp')
     }
     ]
 );
+
