@@ -23,7 +23,7 @@ angular.module('churchMouseApp')
             },
             {
                 id: 1,
-                src: '/images/placeholder_1008x567.jpg',
+                src: '/images/placeholder_1600x1280.jpg',
                 description: 'image'
             },
             {
@@ -46,7 +46,7 @@ angular.module('churchMouseApp')
             window.console.log(image.src);
             return {
                 backgroundImage: 'url(\'' + image.src + '\')'
-            }
+            };
         };
     }
     ]
