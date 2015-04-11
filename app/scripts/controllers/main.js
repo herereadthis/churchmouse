@@ -18,7 +18,7 @@ angular.module('churchMouseApp')
         $scope.imageCarousel = [
             {
                 id: 0,
-                src: '/images/placeholder_1008x567.jpg',
+                src: '/images/dsc4090_1800x1200.jpg',
                 description: 'image'
             },
             {
