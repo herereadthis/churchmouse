@@ -42,6 +42,26 @@ angular.module('churchMouseApp')
                 description: 'image'
             }
         ];
+        $scope.affiliations = [
+            {
+                id: 0,
+                src: '/images/logos/vkr_300x300.png',
+                title: 'Virginia Kyudo Renmei',
+                caption: 'a member organization of'
+            },
+            {
+                id: 0,
+                src: '/images/logos/akr_152x152.png',
+                title: 'American Kyudo Renmei',
+                caption: 'in accordance with'
+            },
+            {
+                id: 0,
+                src: '/images/logos/ikyf_580x580.png',
+                title: 'International Kyudo Federation',
+                caption: 'governing worldwide body'
+            }
+        ];
         $scope.getBg = function(image) {
             window.console.log(image.src);
             return {
@@ -51,4 +71,3 @@ angular.module('churchMouseApp')
     }
     ]
 );
-

@@ -57,27 +57,11 @@
 <footer role="contentinfo">
     <div class="bellmaker_container">
         <div id="affiliation">
-            <figure>
-                <div><img src="/images/logos/vkr_300x300.png" width="100%" /></div>
+            <figure ng-repeat="affiliation in affiliations">
+                <div><img ng-src="{{ affiliation.src }}" width="100%" /></div>
                 <figcaption>
-                    <p><span>Virginia Kyudo Renmei</span>
-                        <span>a member organization of</span>
-                    </p>
-                </figcaption>
-            </figure>
-            <figure>
-                <div><img src="/images/logos/akr_152x152.png" width="100%" /></div>
-                <figcaption>
-                    <p><span>American Kyudo Renmei</span>
-                        <span>in accordance with</span>
-                    </p>
-                </figcaption>
-            </figure>
-            <figure>
-                <div><img src="/images/logos/ikyf_580x580.png" width="100%" /></div>
-                <figcaption>
-                    <p><span>International Kyudo Federation</span>
-                        <span>governing worldwide body</span>
+                    <p><span>{{ affiliation.title }}</span>
+                        <span>{{ affiliation.caption }}</span>
                     </p>
                 </figcaption>
             </figure>
