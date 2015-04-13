@@ -4,5 +4,53 @@
         padding: 10rem 0 4rem 0;
 
     }
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
 
+#affiliation {
+    @media @da_small {
+        float: left;
+        width: 45rem;
+    }
+    figure {
+        height: 6rem;
+        padding-bottom: 0.5rem;
+    }
+    figcaption {
+        float: left;
+        width: calc(~"100% - 6.5rem");
+        margin-left: 0.5rem;
+    }
+    div {
+        width: 6rem;
+        height: 6rem;
+        float: left;
+    }
+    p {
+    }
+    span {
+        display: block;
+    }
+    span:first-child {
+        .font_raleway;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 300;
+        padding-top: 0.8rem;
+        text-transform: uppercase;
+    }
+    span:last-child {
+        .font_tinos;
+    }
+}
+#vital_info {
+    @media @da_small {
+        float: left;
+        width: calc(~"100% - 45rem");
+        text-align: right;
+    }
 }
