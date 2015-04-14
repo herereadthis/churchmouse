@@ -15,8 +15,8 @@
         <div id="banner_carousel">
             <ul>
                 <li ng-repeat="image in imageCarousel">
-                    <a href title="image.description">
-                        <img ng-src="{{ image.src }}" width="100%" />
+                    <a href title="{{ image.description }}">
+                        <img ng-src="{{ image.src }}" alt="{{ image.description }}" width="100%" />
                         <!-- <span ng-style="getBg(image)"></span> -->
                     </a>
                 </li>

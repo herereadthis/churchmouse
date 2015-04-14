@@ -19,27 +19,27 @@ angular.module('churchMouseApp')
             {
                 id: 0,
                 src: '/images/carousel/dsc4090_1800x1200.jpg',
-                description: 'image'
+                description: 'Instructor Bill Reid demonstrating kyudo at Sakura Matsuri 2014'
             },
             {
                 id: 1,
                 src: '/images/carousel/placeholder_1008x567.jpg',
-                description: 'image'
+                description: 'Jimmy prepares to shoot his first arrow, the haya'
             },
             {
                 id: 2,
                 src: '/images/carousel/va1_432x288.jpg',
-                description: 'image'
+                description: 'Students practicing in King George'
             },
             {
                 id: 3,
                 src: '/images/carousel/placeholder_1600x1280.jpg',
-                description: 'image'
+                description: 'Group Photo at Kyudo demonstration, Sakura Matsuri 2014'
             },
             {
                 id: 4,
                 src: '/images/carousel/dsc5138_1800x1200.jpg',
-                description: 'image'
+                description: 'Students helping each other during practice'
             }
         ];
         $scope.affiliations = [
